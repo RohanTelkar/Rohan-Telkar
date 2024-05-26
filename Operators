@@ -1,0 +1,44 @@
+#1.calculate the multiplication of two numbers
+
+num1=3                                                      #declaring variable 1
+num2=2                                                      #declaring variable 2
+addition=num1 + num2                                        #addition of two numbers
+multiplication=num1 * num2                                  #multiplication of two numbers
+print("multiplication of two numbers:",multiplication)      #printing multiplication of two numbers
+print("addition of two numbers:",addition)                  #printing addition of two numbers
+
+output
+multiplication of two numbers: 6
+addition of two numbers: 5
+----------------------------------------------------------------------------------------------------------------------------------------
+#2.Declare two variables and print that which variable is largest using ternary operators
+
+a=20                                                       #declaring variable 1  
+b=10                                                       #declaring variable 2
+is_largest=True if a>=b else False                         #ternary operator                  
+print(is_largest)                                          #printing result
+
+output
+True
+------------------------------------------------------------------------------------------------------------------------------------------
+#3.Python program to convert the temperature in degree centigrade to Fahrenheit
+
+centigrade=50                                             #declaration of degree centigrade
+fahrenheit=9/5 * centigrade + 32                          #converting degree centigrade to Fahrenheit
+print(fahrenheit)                                         #printing result
+
+output
+122.0
+------------------------------------------------------------------------------------------------------------------------------------------
+#4.python program to find the area of a Triangle
+
+m=3                                                       #side 1
+n=4                                                       #side 2
+o=5                                                       #side 3
+
+t=(m+n+o)/2                                               #calculating semi perimeter
+area=(t*(t-m)*(t-n)*(t-o)) **0.5                          #calculating area
+print(area)                                               #area printing
+
+output
+6.0
