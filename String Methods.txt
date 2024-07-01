@@ -1,0 +1,95 @@
+1. Write a Python program to Count all letters, digits, and special symbols from the given string Input = “P@#yn26at^&i5ve” 
+
+string = "P@#yn26at^&i5ve"
+ 
+total_digits = 0                                                            # initialized value
+total_letters = 0
+total_special_symbols =0
+ 
+for s in string:                                                           # iterate through all characters
+    if s.isnumeric():                                                     # if character is digit (return True)
+        total_digits += 1
+    elif s.isalpha():                                                     # if character is letter(return True)
+        total_letters +=1
+    else:                                                                 # if character is special symbols(return False)
+        total_special_symbols += 1
+ 
+print("Total letters found :", total_letters)
+print("Total digits found :", total_digits)
+print("Total special symbols found :",total_special_symbols)
+
+
+output:
+
+Total letters found : 8
+Total digits found : 3
+Total special symbols found : 4
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Write a Python program to remove duplicate characters of a given string. 
+
+string = "String and String Function"                                                          #given string
+v = ""                                                                                         #intializing empyt string                                                         
+for char in string:
+  if char not in v:
+    v = v+char
+print(v)
+L = list("String and String Function" )
+
+output:
+
+String adFuco
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string
+
+string= "Hell0 W0rld ! 123 * # welcome to pYtHoN"
+
+uppercase =0                                                                          # initialized value
+lowercase =0
+numeric_values =0
+special_char =0
+
+for s in string:                                                                      # iterate through all characters
+   if s.isupper():                                                                    # if character is upperletter(return True)
+      uppercase +=1
+   elif s.islower():                                                                  # if character is lowerletter(return True)
+      lowercase +=1
+   elif s.isdigit():                                                                  # if character is digit(return True)
+      numeric_values +=1
+   else:                                                                              # if character is special character(return False)
+      special_char +=1
+
+print("Total uppercase found:", uppercase)
+print("Total lowercase found:", lowercase)
+print("Total numeric values found:", numeric_values)
+print("Total special characters found:", special_char)
+
+output:
+
+Total uppercase found: 5
+Total lowercase found: 18
+Total numeric values found: 5
+Total special characters found: 11
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Write a Python Count vowels in a string input= “Welcome to Python Assignment” 
+
+string = "Welcome to Python Assignment"                                           #defining text in vowels function name
+vowels = "aeiouAEIOU"
+ 
+count = sum(string.count(vowel) for vowel in vowels)                              #PRINT STATEMNT
+print(count)
+
+output:
+
+8
+
+
+ 
+
+
+
+
