@@ -1,0 +1,110 @@
+#1.Python Program to Check Leap Year
+
+year=int(input("Enter the year:"))                             #Taking year value from the user
+if(year%4==0 and year%100!=0 or year%400==0):                  #writing the condition for leap year
+    print("The year is a leap year!")                          #printing the statement if it is leap year
+else:
+    print("The year is not a leap year!")                      #printing the statement it is not aleap year
+
+output:
+Enter the year: 2024
+The year is a leap year!
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#2.Python Program to find the Largest among three numbers
+
+number1=20                                                     #taking number1 as an variable and there values
+number2=15                                                     #taking number2 as an variable and there values
+number3=10                                                     #taking number3 as an variable and there values
+if(number1>=number2) and (number1>=number3):                   #giving condition to check which number is largest among three numbers
+     largest=number1                                           #if the number1 is largest print largest value
+elif(number2>=number1) and (number2>=number3):                 #giving condition to check which number is largest among three numbers
+     largest=number2                                           #if the number2 is largest print largest value
+else:
+    largest=number3                                            #if the number3 is largest print largest value
+    
+print(largest)                                                 #printing the largest value
+
+output:
+20
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#3.Python program to check if a number is positive,negative or zero
+
+number=float(input("Enter the number:"))                      #taking number as an variable and asking its value from the user
+if number>0:                                                  #giving the condition to check whether the number is greater than 0
+    print("The number is positive")                           #if it is greater than 0 than print the output as positive number
+elif number<0:                                                #giving the condition to check whether the number is less than 0
+    print("The number is negative")                           #if it is less than 0 than print the output as negative number
+else:
+    print("The number is zero")                               #printing the output is zero
+
+output:
+Enter the number: 7
+The number is positive
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#4.A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys.
+ The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000.
+ On orders of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for electrical
+ charging based toys of value more than Rs. 500. Assume that the numeric codes 1,2 and 3 are used for battery based toys, key-based toys,
+ and electrical charging based toys respectively. Write a program that reads the product code and the order amount and prints out the 
+ net amount that the customer is required to pay after the discount. 
+ 
+def compute_discount():                                            #defining the function                
+    print("1. For Battery based Toys")                             #printing the statement1
+    print("2. For Key based Toys")                                 #printing the statement2
+    print("3. Electric charging based Toys")                        #printing the statement3
+    pc = int(input("Enter the product code (1,2 or 3)?:"))         #program code is written as pc and taking its value from the user
+    amt = int(input("Enter the amount:"))                          #order amouunt is written as amt and taking its value from the user
+    if pc==1:                                                      #if the program code is 1 it will check the condtion for the battery based toys
+        if amt>1000:                                               #condition checking if the amount is greater than 1000
+            dis = amt * 0.1                                        #discount 10%
+        else:
+            dis = 0                                                #it is less than 1000 no discount
+    elif pc==2:                                                    #if the program code is 2 it will check the condtion for the key based toys
+        if amt>100:                                                #condition checking if the amount is greater than 100
+            dis = amt * 0.05                                       #discount 5%
+        else:
+            dis=0                                                  #it is less than 100 no discount
+    elif pc==3:                                                    #if the program code is 3 it will check the condtion for the Electric charging based toys
+        if amt>500:                                                #condition checking if the amount is greater than 500
+            dis = amt*0.1                                          #discount 10%
+        else:
+            dis = 0                                                #it is less than 500 no discount
+    else:                                                          
+        print("Product is not available")                          
+    net_amt= amt - dis                                             #calculating the net amount
+    print("Customer has to pay:",net_amt)                          #printing the customer has to pay the net amount
+compute_discount()                                                 #closing the function
+
+output:
+
+1. For Battery based Toys
+2. For Key based Toys
+3. Electric charging based Toys
+Enter the product code (1,2 or 3)?: 3
+Enter the amount: 501
+Customer has to pay: 450.9
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+5. A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km
+
+distance=int(input("Enter the distance:"))                            #Taking distance as an variable and taking its value from the user
+if distance<=50:                                                      #checking the condition if satisfied
+   fare=distance*8                                                    #calculating fare
+   print("the total fare is:",fare)                                   #printing the total fare and value
+elif distance<=100:                                                   #checking the condition if satisfied 
+   fare=distance*10                                                   #calculating fare
+   print("the total fare is:",fare)                                   #printing the total fare and value
+elif distance>100:                                                    #checking the condition if satisfied 
+    fare=distance*12                                                  #calculating fare
+    print("the total fare is:",fare)                                  #printing the total fare and value
+else:
+   print("Invalid fare")                                              #printing invalid fare
+
+output:
+
+Enter the distance: 70
+the total fare is: 700
+   
