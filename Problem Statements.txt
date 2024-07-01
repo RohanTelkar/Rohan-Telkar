@@ -1,0 +1,38 @@
+#1.Using input() function take one number from the user and using ternary operators check whether the number is even or odd
+
+num=int(input("enter num is:"))                                      #taking the input value from the user
+result= 'even' if num % 2 == 0 else 'odd'                            #using tenary operators to find even or odd
+print(result)                                                        #printing the result
+
+output:
+enter num is: 7
+odd
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+#2.Using input function take two numbers and then swap the number 
+
+num1=input("enter num1 is:")                                         #taking the num1 value from the user
+num2=input("enter num2 is:")                                         #taking the num2 value from the user
+temp=num1                                                            #temp variable is used to swap the two values
+num1=num2
+num2=temp
+print("swap the numbers:")                                           #after swapping the numbers
+print(num1)                                                          #printing the num1 
+print(num2)                                                          #printing the num2
+
+output:
+enter num1 is: 8
+enter num2 is: 6
+swap the numbers:
+6
+8
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#3.Write a program to Convert Kilometers to Miles
+
+km=8                                                                #assigning km and their value
+miles=km*0.621371                                                   #converting km to miles using a miles formula
+print(miles)                                                        #printing the miles
+
+output:
+4.970968
