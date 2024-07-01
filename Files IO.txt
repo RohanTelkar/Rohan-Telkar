@@ -1,0 +1,66 @@
+#1. Write a function in python to read the content from a text file "ABC.txt" line by line and display the same on screen.
+def read_file_and_display(filename):                                       #defining read_file and displaying the filename
+    try:
+        with open(filename, 'r') as file:                                  #opening filename and it will read the file
+            for line in file:
+                print(line, end='')                                        #printing the content in the file
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")                             #printing if the filename is not found
+
+read_file_and_display("ABC.txt")                                           #Example usage:
+
+output:
+Rohan Telkar
+----------------------------------------------------------------------------------------------------------------------------------------
+
+#2. Write a function in Python to count and display the total number of words in a text file “ABC.txt” 
+def count_words(filename):                                                #defining the count of words in filename
+    try:
+        with open(filename, 'r') as file:                                 #opening filename and it will read the file
+            text = file.read()                                            #It will read the text which is stored in file
+            word_count = len(text.split())                                #It will count the word
+            print(f"Total number of words in '{filename}': {word_count}") #printing the count of the word
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")                            #printing if the filename is not found
+
+count_words("ABC.txt")                                                    # Example usage:
+
+output:
+Total number of words in 'ABC.txt': 2
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#3. Write a function in Python to count uppercase character in a text file “ABC.txt” 
+def count_uppercase(filename):                                           #defining the uppercase of words in filename
+    try:
+        with open(filename, 'r') as file:                                #opening filename and it will read the file                       
+            text = file.read()                                           #It will read the text which is stored in file
+            uppercase_count = sum(1 for char in text if char.isupper())  #It will count the uppercase character in the word
+            print(f"Total number of uppercase characters in '{filename}': {uppercase_count}")  #printing the count of uppercase character 
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")                           #printing if the filename is not found 
+
+count_uppercase("ABC.txt")                                               # Example usage:
+
+output:
+Total number of uppercase characters in 'ABC.txt': 2
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#4. Write a function display_words() in python to read lines from a text file "story.txt", and display those words, which are less than 4 characters.
+def display_words(filename):                                           #defining the functions
+    try:
+        with open(filename, 'r') as file:                              #opening filename and it will read the file
+            for line in file:
+                words = line.split()                                   #It will split the words
+                for word in words:
+                    if len(word) < 4:                                  #if the length of word is less than 4 it will print the word
+                        print(word)                                    #printing the word
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")                         #printing if the filename is not found 
+
+display_words("story.txt")                                            # Example usage:
+
+output:
+Ram
+is
+a
+boy
