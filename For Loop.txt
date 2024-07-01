@@ -1,0 +1,76 @@
+#1. Print the first 10 natural numbers using for loop 
+
+for i in range (1,11):                                                          #i PRINTS NUMBERS FROM 1 TO 10
+    print("First 10 natural numbers:",i)
+
+OUTPUT:
+
+First 10 natural numbers: 1
+First 10 natural numbers: 2
+First 10 natural numbers: 3
+First 10 natural numbers: 4
+First 10 natural numbers: 5
+First 10 natural numbers: 6
+First 10 natural numbers: 7
+First 10 natural numbers: 8
+First 10 natural numbers: 9
+First 10 natural numbers: 10
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#2. Python program to check if the given string is a palindrome 
+
+input_string = "madam"
+reversed_string = ""
+for char in input_string:                                                       #GIVING CHAR IN FOR LOOP ITERATION
+    reversed_string = char + reversed_string                                    #THE CONDITION WHNE CHAR AND REVERSED STRING R EQUAL
+if input_string == reversed_string:                                             #IF THE CONDITION IS TRUE IT PRINTS YES ELSE NO
+    print("Yes, the given string is palindrome")
+else:
+    print("No, it is not")
+
+OUTPUT:
+
+Yes, the given string is palindrome
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#3. Python program to check if a given number is an Armstrong number 
+
+num = int(input("Enter a number: "))
+sum = 0                                                                         #INITIALISE SUM TO 0
+temp = num                                                                      #TEMP TO NUM
+while temp > 0:                                                                 #WHEN TEMP LESSER THAN 0
+   digit = temp % 10                                                            #CALCULATION ASSIGNED TO DIGIT
+   sum += digit ** 3
+   temp //= 10       
+if num == sum:                                                                  #IF YES PRINTS CORRECT STATEMENT ELSE NO
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+OUTPUT:
+
+Enter a number:  370
+370 is an Armstrong number
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#4. Python program to get the Fibonacci series between 0 to 50 
+
+def fibonacci_series(limit):
+    a, b = 0, 1                                                        # Initialize variables to store the first two numbers in the series
+ 
+    while a <= limit:                                                  # Iterate through the series until the limit is reached                      
+        print(a, end=" ")                                              # Print the current number in the series
+        a, b = b, a + b                                                # Update variables to generate the next number in the series
+
+fibonacci_series(50)                                                   # Call the function to generate Fibonacci series up to 50
+
+
+OUTPUT:
+
+Fibonacci series between 0 and 50:
+0 1 1 2 3 5 8 13 21 34 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
