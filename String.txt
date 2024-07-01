@@ -1,0 +1,63 @@
+
+#1. Write a Python program to count the occurrences of each word in a given sentence
+
+string = “To change the overall look of your document. To change the look
+
+available in the gallery”
+
+str = "To change the overall look your document. To change the look available in the gallery"  #taking str has an variable and its values in string
+c = dict()                                                            #taking c has an variable and its value as an dictionary
+txt = str.split(" ")                                                  #taking text as an variable and splitting the string word using split 
+for t in txt:                                                         #giving the condition
+	if t in c:                                                      
+		c[t] += 1                                                 #if the string is repeated then print how many time printed
+	else:
+		c[t] = 1                                                  #if the string is not repeated print 1
+print(c)                                                              #printing the c
+
+output:
+
+{'To': 2, 'change': 2, 'the': 3, 'overall': 1, 'look': 2, 'your': 1, 'document.': 1, 'available': 1, 'in': 1, 'gallery': 1}
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+#2. Write a Python program to remove a newline in Python String = "\nBest \nDeeptech \nPython \nTraining\n"
+
+string = "\nBest \nDeeptech \nPython \nTraining\n"
+
+remove_string = string.replace("\n", "")                      # Remove newline characters
+
+print(remove_string)                                          #printing the remove_string
+
+output:
+
+Best Deeptech Python Training
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+#3. Write a Python program to reverse words in a string String = “Deeptech Python Training”
+
+def rev_words(string):                                                     #defining reverse words
+     words = string.split(' ')                                                #spliting the string using string.split function
+     reverse_words = " ".join(reversed(words))                                #reversing the words
+     return reverse_words                                                     #return the reversed words
+
+   string = "Deeptech Python Training"
+   print("Reversed words:",rev_words(string))
+
+OUTPUT:
+
+Reversed words: Training Python Deeptech
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+#4. Write a Python program to count and display the vowels of a given text String=”Welcome to python Training”
+
+string = ("Welcome to python Training")                                    # taking string has an variable and also its values in string
+
+string = string.casefold()                                                 # make it suitable for caseless comparisions
+
+count = {x:sum([1 for char in string if char == x]) for x in 'aeiou'}      # count the vowels
+
+print(count)                                                               # printing the count
+
+output:
+
+{'a': 1, 'e': 2, 'i': 2, 'o': 3, 'u': 0}
